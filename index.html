@@ -34,7 +34,7 @@
     map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
     setTimeout(function () {
-        map.centerAndZoom("郑州", 15);
+        map.centerAndZoom("郑州", 17);
     }, 2000)
 
     var geolocation = new BMap.Geolocation();
@@ -44,7 +44,9 @@
             var marker = new BMap.Marker(r.point);
             map.addOverlay(marker);//标出所在地
             marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
-
+            var stCtrl = new BMap.PanoramaControl(); //构造全景控件
+            stCtrl.setOffset(new BMap.Size(20, 50));
+            map.addControl(stCtrl);//添加全景控件
             map.panTo(r.point);//地图中心移动
             //alert('您的位置：'+r.point.lng+','+r.point.lat);
             var point = new BMap.Point(r.point.lng, r.point.lat);//用所定位的经纬度查找所在地省市街道等信息

@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>H5定位</title>
+    <title>地图</title>
     <style>
         * {
             margin: 0;
@@ -43,7 +43,7 @@
             marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
             map.panTo(r.point);//地图中心移动
             setTimeout(function () {
-                map.centerAndZoom(r.point,16);
+                map.centerAndZoom(r.point,18);
             },1000)
 
             var stCtrl = new BMap.PanoramaControl(); //构造全景控件
